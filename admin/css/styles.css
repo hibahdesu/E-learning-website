@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+:root {
+    --color-1: white;
+    --color-2:  #7648C5;
+    --color-2-light: #936fd1;
+    --font-1: 'Poppins', sans-serif;;
+    --white-color-100: rgba(255, 255, 255, 1);
+    --white-color-75: rgba(255, 255, 255, .75);
+    --white-color-50: rgba(255, 255, 255, .50);
+    --white-color-25: rgba(255, 255, 255, .25);
+
+    --dark-color-100: rgb(18, 12, 23);
+    --dark-color-75: rgba(0, 25, 36, .75);
+    --dark-color-50: rgba(0, 25, 36, .50);
+    --dark-color-25: rgba(0, 25, 36, .25);
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+    background: var(--color-2-light);
+    display: flex;
+    gap: 3rem;
+    color: var(--white-color-100);
+    justify-content: space-evenly;
+    align-items: center;
+}
+#logo h2 a{
+    color: var(--color-2-light);
+}
+#link h3 a {
+    color: var(--white-color-100);
+}
+#link h3 a:hover {
+    color: var(--color-2-light);
+}
+#bodyLeft {
+    width: 25%;
+    height: 550px;
+    background: var(--dark-color-100);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    overflow-y: auto;
+    float: left;
+}
+
+#bodyright {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    overflow-y: auto;
+    background: var(--white-color-100);
+    color: var(--dark-color-100);
+    overflow-y: auto;
+    float: right;
+}
+#bodyLeft::-webkit-scrollbar {
+    display: none;
+}
+#bodyLeft div {
+    display: flex;
+    flex-direction: column;
+}
+#bodyLeft div h3, #bodyright h3 {
+    color: var(--white-color-100);
+    text-align: center;
+    font-size: 14px;
+    background-color: var(--color-2-light);
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+
+}
+#bodyLeft div ul {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    gap: 1rem;
+}
+#bodyLeft div ul li {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 5%;
+    
+}
+#bodyLeft div ul li a {
+    display: flex;
+    color: var(--white-color-100);
+    font-size: 12px;
+    flex-direction: row;
+    gap: .5rem;
+}
+#bodyLeft div ul li a:hover {
+    color: rgb(210, 233, 234);
+    font-size: 13px;
+    font-weight: bold;
+    transition: .4s;
+}
+
+
+#add, .edit_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    padding: 2%;
+    box-sizing: border-box;
+    border-radius: .5rem;
+    gap: .5rem;
+}
+#add details {
+    width: 70%; 
+}
+#add details summary {
+    text-align: center;
+    width: 100%;
+    height: 35px;
+    color: var(--color-2-light);
+    border: 1px solid var(--color-2-light);
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    padding: .5rem 0;
+}
+#add details form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--color-2-light);
+    padding: 3%;
+    box-sizing: border-box;
+}
+#add details form input, .edit_form input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    padding-left: 3%;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 1rem;
+}
+#add details form select, select {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    padding-left: 3%;
+    padding-right: 3%;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 1rem;
+}
+#add details form button, .edit_form button {
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    align-self: center;
+    background: var(--white-color-100);
+    color: var(--color-2-light);
+    border: none;
+    border-radius: 1rem;
+}
+#add details form button:hover, .edit_form button:hover {
+    cursor: pointer;
+    background: transparent;
+    color: var(--white-color-100);
+    border: 2px solid var(--white-color-100);
+    transition: .3s ease-in-out;
+}
+#add table {
+    width: 70%;
+    margin: auto;
+}
+#add table tr th {
+    height: 35px;
+    background: var(--color-2-light);
+    color: var(--white-color-100);
+    box-sizing: border-box;
+    text-align: left;
+    padding-left:  2%;
+    font-size: 13px;
+}
+#add table tr td {
+    height: 30px;
+    padding-left: 2%;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: var(--color-2-light);
+}
+.edit_form {
+    justify-content: center;
+    background: var(--color-2-light);
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+.con {
+    width: 100%;
+}
+.con form table {
+    width: 70%;
+    padding: 5%;
+    box-sizing: border-box;
+    margin: auto;
+    color: var(--color-2-light);
+}
+.con form table tr td {
+    width: 50%;
+    height: 35px;
+
+}
+.con form table tr td input {
+    width: 100%;
+    height: 30px;
+    padding-left: 5%;
+    border-radius: 1rem;
+    border: 1px solid var(--color-2-light);
+}
+.con form
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.con form button {
+    cursor: pointer;
+    width: 20%;
+    height: 35px;
+    background:  var(--color-2-light);
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    color: var(--white-color-100);
+    font-weight: bold;
+}
+.con form button:hover {
+    color: var(--color-2-light);
+    border: 2px solid var(--color-2-light);
+    background: none;
+}
+#add details form .textarea {
+    padding: .5rem;
+    border: 1px solid var(--white-color-100);
+    border-radius: .5rem;
+}
+.about {
+box-sizing: border-box;
+}
+.about form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    flex-direction: column;
+    gap: 1rem;
+}
+.about form button {
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    align-self: center;
+    color: var(--white-color-100);
+    background:var(--color-2-light) ;
+    border-radius: 1rem;
+    border: none;
+}
+.about form textarea {
+    width: 60%;
+    height: 150px;
+    outline: none;
+    padding: 1rem;
+    border: 1px solid var(--color-2-light);
+    border-radius: 1rem;
+}
+.about form button:hover {
+    background: var(--white-color-100);
+    border: 1px solid var(--color-2-light);
+    color: var(--color-2-light);
+}
+.logo h2 a img {
+    width: 80px;
+    height: 80px;
+}
+/*
+#logo {
+    width: 30%;
+    height: 60px;
+    float: left;
+}
+#title {
+    width: 40%;
+    height: 60px;
+    float: left;
+}
+#link {
+    width: 30%;
+    height: 60px;
+    float: left;
+}
+*/
