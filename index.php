@@ -9,6 +9,7 @@
     <title>Polyglot E-Learning | Home</title>
 </head>
 <body>
+    <?php include("inc/function.php"); ?>
 <div id="header" class="header ">
     <div id="up_head" class="up_head ">
 <div class='container'>
@@ -16,16 +17,6 @@
             <p>
             <?php echo date('l, d F Y'); ?>
             </p>
-        </div>
-
-        <div id="link" class="link">
-            <ul>
-                <li> <a href="#"><i class="bi bi-facebook"></i></a></li>
-                <li> <a href="#"><i class="bi bi-twitter"></i></a></li>
-                <li> <a href="#"><i class="bi bi-google"></i></a></li>
-                <li> <a href="#"><i class="bi bi-youtube"></i></a></li>
-                <li> <a href="#"><i class="bi bi-linkedin"></i></a></li>
-            </ul>
         </div>
         </div>
     </div>
@@ -39,27 +30,90 @@
         </h2>
         </div>
 
+        <div class="search">
+            <form action="post" enctype="multipart/form-data">
+                <button name="search"><i class="bi bi-search"></i></button>
+                <input type="search" name="query" placeholder="Search...">
+                
+            </form>
+    </div>
+
         
         <div class="icon grid">
         <div class="signup">
         <h4>Sign Up</h4>
+            <form action="post" class='flex'>
+                <h3 class='flex'>
+                <i class="bi bi-person-fill-add"></i>
+                </h3>
+                <h2>Sign Up</h2>
+                <div class="input_f flex">
+                <i class="bi bi-person-fill"></i>
+                <input type="text" name='s_email' placeholder='Enter Your Name'>
+                </div>
+
+                <div class="input_f flex">
+                <i class="bi bi-envelope-at-fill"></i>
+                <input type="text" name='s_name' placeholder='Enter Your Email'>
+                </div>
+
+
+                <div class="input_f flex">
+                <i class="bi bi-person-fill-lock"></i>
+                <input type="text" name='s_pass' placeholder='Enter Your Password'>
+                </div>
+
+                <div class="input_f flex">
+                <i class="bi bi-person-fill-lock"></i>
+                <input type="text" name='s_pass2' placeholder='Reenter Your Password'>
+                </div>
+
+                
+                <button name='s_signup'>Sign up</button>
+                </form>
         </div>
 
 
         <div class="login">
         <h4>Log in</h4>
+            <form action="post" class='flex'>
+                <h3 class='flex'>
+                <i class="bi bi-person-circle"></i>
+                </h3>
+                <h2>Log In</h2>
+                <div class="input_f flex">
+                <i class="bi bi-envelope-at-fill"></i>
+                <input type="text" id='login-form-username' name='u_email' placeholder='Enter Your Email'>
+                </div>
+
+                <div class="input_f flex">
+                <i class="bi bi-person-fill-lock"></i>
+                <input type="text" name='u_pass' placeholder='Enter Your Password' id='login-form-password'>
+                </div>
+
+                <h5>
+                    Forget Password?
+                </h5>
+
+                <button name='u_login'>Log In</button>
+            </form>
         </div>
         
         <div class='icons2 flex'>
         <div class="cart">
             <a href="cart.php">
                     <i class="bi bi-cart-fill"></i>
-                    <span>0</span>
+                    <span>2</span>
             </a>
         </div>
 
             <div class="menu">
             <h2><i class="bi bi-list"></i></h2>
+            <ul>
+            
+                <?php echo menu_cat(); ?>
+            </ul>
+            
         </div>
 
         </div>
@@ -69,13 +123,7 @@
         
     </div>
 
-    <div class="search container">
-            <form action="post" enctype="multipart/form-data">
-                <button name="search"><i class="bi bi-search"></i></button>
-                <input type="search" name="query" placeholder="Search...">
-                
-            </form>
-        </div>
+    
 </div>
 <!--header-->
     <div class="slider flex">
@@ -86,6 +134,7 @@
     <div class="home_cat">
     <h3>Available Courses</h3>
     <ul class='grid'>
+        <!--
         <li>
         <img src="images/courses/Japanese calligraphy-pana.svg" alt="image here ">
             <h4>Japanese</h4>
@@ -102,18 +151,17 @@
         <img src="images/courses/English teacher-rafiki.svg" alt="image here ">
             <h4>English</h4>
             <p>courses: <span>4</span> </p>
-        </li>
+        </li> -->
 
-
+        <?php echo pop_cat(); ?>
     </ul>
-    <?php include ("inc/home_cat.php"); ?>
 </div>
 
 <div class="top_course">
     <h3>Popular Courses</h3>
     <ul class='flex'>
         <li>
-            <a href="#">
+            <a href="course_details.php">
                 <img src="images/courses/Knowledge-amico.svg" alt="">
                 <h4 class="c_n">Japanese: 
                     <span class="c_t">N5 Kanji</span>
@@ -214,7 +262,7 @@
         
 
 
-
+        
     </ul>
 </div>
 
