@@ -104,7 +104,7 @@
         <div class="cart">
             <a href="cart.php">
                     <i class="bi bi-cart-fill"></i>
-                    <span>0</span>
+                    <span>2</span>
             </a>
         </div>
 
